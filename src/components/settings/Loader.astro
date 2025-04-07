@@ -13,14 +13,14 @@
             localStorage.setItem('incog||search', 'https://www.google.com/search?q=%s');
         }
     }
-    setTheme(localStorage.getItem('incog||currentTheme') as string || 'ocean');
+    setTheme(localStorage.getItem('incog||currentTheme') as string || 'terminal');
     setProxy(localStorage.getItem('incog||proxy') as string || 'uv');
     setTransport(localStorage.getItem('incog||transport') as string || 'epoxy');
     searchUrl();
     changeTitle(localStorage.getItem('incog||title') as string || null);
     changeFavicon(localStorage.getItem('incog||favicon') as string || null);
     document.addEventListener('astro:after-swap', function () {
-        setTheme(localStorage.getItem('incog||currentTheme') as string || 'ocean');
+        setTheme(localStorage.getItem('incog||currentTheme') as string || 'terminal');
         changeTitle(localStorage.getItem('incog||title') as string || null);
         changeFavicon(localStorage.getItem('incog||favicon') as string || null);
     });
